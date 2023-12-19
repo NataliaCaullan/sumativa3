@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API Municipalidad de Chuchunco</title>
+</head>
+<body>
+    <h1>{{ mensaje_bienvenida }}</h1>
+    
+    <h2>Servicios Recientes:</h2>
+    <ul>
+        {% for servicio in servicios_recientes %}
+            <li>{{ servicio.name }} - {{ servicio.description }}</li>
+        {% endfor %}
+    </ul>
+    
+    <h2>Proveedores Registrados:</h2>
+    <ul>
+        {% for proveedor in proveedores %}
+            <li>{{ proveedor.fantasy_name }} - RUT: {{ proveedor.tax_id }}</li>
+        {% endfor %}
+    </ul>
+
+</body>
+</html>
